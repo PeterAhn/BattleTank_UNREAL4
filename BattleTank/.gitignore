@@ -3,7 +3,7 @@
 
 *.VC.db
 
-Content\MobileStarterContent/*
+Content/MobileStarterContent/*
 
 # Compiled Object files
 *.slo
