@@ -18,6 +18,8 @@ public:
 
 	virtual void BeginPlay() override;
 
+	virtual void Tick(float DeltaSeconds) override;
+
 	ATank* GetControlledTank() const;
 	
 	ATank* GetPlayerTank() const;
