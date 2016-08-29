@@ -28,8 +28,6 @@ void ATankPlayerController::Tick(float DeltaSeconds)
 
 	AimTowardCrosshair();
 
-	//UE_LOG(LogTemp, Warning, TEXT("Player controller ticking"));
-
 }
 
 ATank* ATankPlayerController::GetControlledTank() const
@@ -45,8 +43,7 @@ void ATankPlayerController::AimTowardCrosshair()
 
 	if (GetSightRayHitLocation(HitLocation)) // Has "side-effect", is going to line trace
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("Hit direction: %s"), *HitLocation.ToString());
-		
+
 		GetControlledTank()->AimAt(HitLocation);
 	}
 
@@ -65,8 +62,6 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector & HitLocation) const
 	FVector LookDirection;
 	if (GetLookDirection(ScreenLocation, LookDirection))
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("Look direction: %s"), *LookDirection.ToString());
-
 		GetLookVectorHitLocation(LookDirection, HitLocation);
 	}
 	

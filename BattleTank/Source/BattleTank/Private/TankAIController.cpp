@@ -36,8 +36,6 @@ void ATankAIController::Tick(float DeltaSeconds)
 		// Fire if ready 
 	}
 
-	//UE_LOG(LogTemp, Warning, TEXT("Player controller ticking"));
-
 }
 
 ATank* ATankAIController::GetControlledTank() const
