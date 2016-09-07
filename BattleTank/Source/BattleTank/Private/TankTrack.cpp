@@ -3,6 +3,13 @@
 #include "BattleTank.h"
 #include "TankTrack.h"
 
-
+// Sets a throttle between -1 and 1
+void UTankTrack::SetThrottle(float Throttle)
+{	
+	auto ForceApplied = GetForwardVector() * Throttle * TrackMaxDrivingForce;
+	auto ForceLocation = GetComponentLocation();
+	auto TankRoot = Cast<UPrimitiveComponent>(GetOwner()->GetRootComponent());
+	TankRoot->AddForceAtLocation(ForceApplied, ForceLocation);	 
+}
 
 
